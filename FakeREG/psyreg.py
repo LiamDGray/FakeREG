@@ -1,7 +1,10 @@
-r"""Wrapper for psyreg.h
+r"""psyreg: Python wrapper for REG-1 driver DLL
 
 Generated with:
 /home/liam/.local/bin/ctypesgen -o psyreg.py -l FakeREG.dll psyreg.h
+
+For example of using a similar library, see:
+https://github.com/davidjamesca/ctypesgen/blob/master/demo/demoapp.py
 
 Do not modify this file.
 """
@@ -811,7 +814,17 @@ del loaderclass
 add_library_search_dirs([])
 
 # Begin libraries
-_libs["FakeREG-copy.dll"] = load_library("FakeREG-copy.dll")
+
+# LDG: This is the folder containing FakeREG.DLL.  Replace this hard-coded path later.
+dll_folder = r"C:\Users\liamd\source\repos\FakeREG\Debug"
+print(dll_folder)
+
+add_library_search_dirs([dll_folder])
+
+dll_path = dll_folder + "\\FakeREG.dll"
+print(dll_path)
+
+_libs["FakeREG"] = load_library(dll_path)
 
 # 1 libraries
 # End libraries
