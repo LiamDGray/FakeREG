@@ -10,12 +10,12 @@ Usage example:
 
 Python example based on https://www.psyleron.com/reg1_sdk_csample.html :
 
-  import psyreg
-  iNewSources = psyreg.PsyREGEnumerateSources()
-  Source = psyreg.PsyREGGetSource( 0 )    
-  bResult = psyreg.PsyREGOpen( Source )
-  iResult = psyreg.PsyREGGetBytes( Source, rgucReadBuffer, 256, FALSE )
-  # OR: iResult = psyreg.PsyREGGetBits( Source, rgucReadBuffer, 256, FALSE )
-  psyreg.PsyREGClose( Source );
+    import psyreg
+    iNewSources = psyreg.PsyREGEnumerateSources()
+    Source = psyreg.PsyREGGetSource( 0 )    
+    bResult = psyreg.PsyREGOpen( Source )
+    iResult = psyreg.PsyREGGetBytes( Source, rgucReadBuffer, 256, FALSE )
+    # OR: iResult = psyreg.PsyREGGetBits( Source, rgucReadBuffer, 256, FALSE )
+    psyreg.PsyREGClose( Source );
 
 Work in progress! Currently doesn’t work yet.
