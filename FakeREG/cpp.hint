@@ -1,0 +1,2 @@
+#define FAKEREG_API __declspec(dllexport)
+#define FAKEREG_API __declspec(dllimport)
