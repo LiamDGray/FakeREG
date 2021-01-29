@@ -8,6 +8,10 @@ Contains:
 
 Usage example:
 
+Install Python for Windows from e.g. https://www.python.org/downloads/windows/
+
+Probably must use a 32-bit installer to get a 32-bit interpreter, to use the REG-1’s driver, which is 32-bit code. Or if you need 64-bit Python then you can call 32-bit libraries by using https://msl-loadlib.readthedocs.io/en/latest/index.html
+
 Python example based on https://www.psyleron.com/reg1_sdk_csample.html :
 import psyreg
 iNewSources = psyreg.PsyREGEnumerateSources()
